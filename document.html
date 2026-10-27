@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>PDF hujjat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+      background: #f3f4f5;
+    }
+
+    .page {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .toolbar {
+      min-height: 54px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #fff;
+      box-shadow: 0 1px 5px #0002;
+    }
+
+    .toolbar a {
+      color: #527e9a;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .download {
+      padding: 9px 13px;
+      border-radius: 6px;
+      background: #527e9a;
+      color: #fff !important;
+      white-space: nowrap;
+    }
+
+    .viewer {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  height: calc(100vh - 54px);
+  height: calc(100dvh - 54px);
+  border: 0;
+  display: block;
+  background: #ddd;
+}
+
+    @media screen and (max-width: 600px) {
+      .toolbar {
+        min-height: 50px;
+        padding: 8px 12px;
+      }
+
+      .toolbar a {
+        font-size: 14px;
+      }
+
+      .viewer {
+    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
+  }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="toolbar">
+      <a href="index.html">← Orqaga</a>
+      <a class="download" href="New.pdf" download>PDF’ni yuklab olish</a>
+    </header>
+
+    <iframe
+      class="viewer"
+      src="New.pdf"
+      title="PDF hujjat"
+    >
+      PDF hujjatni ochib bo‘lmadi.
+      <a href="New.pdf">PDF’ni yuklab olish</a>
+    </iframe>
+  </main>
+</body>
+</html>
